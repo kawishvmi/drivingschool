@@ -61,6 +61,10 @@ PayPal or Stripe.
 With these building blocks in place you can expand controllers and routes to
 offer a full self‑service portal for each school.
 
+## Admin UI
+The project includes a simple dashboard at `/admin` with links to create a new school. The form at `/schools/create` lets administrators register schools with a name and optional domain.
+
+
 
 ## About Laravel
 
