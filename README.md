@@ -7,6 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Requirements
+
+This project uses **Laravel 12** and requires the following to be installed:
+
+- PHP >= 8.2
+- Composer
+
+## Installation
+
+1. Clone the repository.
+2. Copy `.env.example` to `.env`.
+3. Run `composer install`.
+4. Run `php artisan key:generate`.
+5. Start the development server with `php artisan serve`.
+
+
+## Driving School Management System
+
+This project manages a driving school's daily operations. It provides tools for
+scheduling lessons, communicating via email, managing tutors and students and
+handling GDPR preferences.
+
+Key features include:
+
+- **Schedules** for organising lesson times and allocating classrooms.
+- **Emails** that send notifications for upcoming lessons and account
+  updates.
+- **Tutors** with dedicated profiles that can be assigned to specific classes.
+- **Classes** linking tutors and students with start and end times.
+- **GDPR preferences** so students can control how their information is used.
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
