@@ -38,6 +38,44 @@ Key features include:
 - **Classes** linking tutors and students with start and end times.
 - **GDPR preferences** so students can control how their information is used.
 
+## SaaS Setup Overview
+
+This project can be extended to support multiple driving schools on a single
+platform. Each school registers an account and manages its own instructors,
+students and classes. Payments can be collected through common providers such as
+PayPal or Stripe.
+
+1. **Create a school** – use the `schools` table to store basic information.
+2. **Add users** – link each user to a school as an admin, instructor or
+   student.
+3. **Configure classes** – courses belong to a school and can be assigned to an
+   instructor with a capacity limit.
+4. **Schedule lessons** – scheduled classes tie a course to specific dates and
+   times.
+5. **Record GDPR preferences** – students manage email and data retention
+   settings.
+6. **Accept payments** – store transactions in the `payments` table and
+   integrate providers (e.g. PayPal, Stripe) using Laravel's APIs or a package
+   like Cashier.
+
+With these building blocks in place you can expand controllers and routes to
+offer a full self‑service portal for each school.
+
+## Admin UI
+The project includes a simple dashboard at `/admin` with links to create a new school. The form at `/schools/create` lets administrators register schools with a name and optional domain.
+
+## BackPack Admin Dashboard
+For a full-featured administration panel you can use [BackPack for Laravel](https://backpackforlaravel.com). After installing the package with:
+
+```bash
+composer require backpack/crud
+php artisan backpack:install
+```
+
+the dashboard becomes available at `/admin/dashboard`. This repository provides a custom dashboard view at
+`resources/views/vendor/backpack/base/dashboard.blade.php` and a sample route in `routes/backpack/custom.php`.
+
+
 
 ## About Laravel
 
