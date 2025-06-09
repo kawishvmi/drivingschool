@@ -62,6 +62,20 @@ With these building blocks in place you can expand controllers and routes to
 offer a full self‑service portal for each school.
 
 
+## Admin UI
+The project includes a simple dashboard at `/admin` with links to create a new school. The form at `/schools/create` lets administrators register schools with a name and optional domain.
+
+## BackPack Admin Dashboard
+For a full-featured administration panel you can use [BackPack for Laravel](https://backpackforlaravel.com). After installing the package with:
+
+```bash
+composer require backpack/crud
+php artisan backpack:install
+```
+
+the dashboard becomes available at `/admin/dashboard`. This repository provides a custom dashboard view at
+`resources/views/vendor/backpack/base/dashboard.blade.php` and a sample route in `routes/backpack/custom.php`.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
