@@ -12,6 +12,7 @@
 
 # Environment files
 .env
+!.env.example
 
 # Linux
 *~
