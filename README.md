@@ -38,6 +38,29 @@ Key features include:
 - **Classes** linking tutors and students with start and end times.
 - **GDPR preferences** so students can control how their information is used.
 
+## SaaS Setup Overview
+
+This project can be extended to support multiple driving schools on a single
+platform. Each school registers an account and manages its own instructors,
+students and classes. Payments can be collected through common providers such as
+PayPal or Stripe.
+
+1. **Create a school** – use the `schools` table to store basic information.
+2. **Add users** – link each user to a school as an admin, instructor or
+   student.
+3. **Configure classes** – courses belong to a school and can be assigned to an
+   instructor with a capacity limit.
+4. **Schedule lessons** – scheduled classes tie a course to specific dates and
+   times.
+5. **Record GDPR preferences** – students manage email and data retention
+   settings.
+6. **Accept payments** – store transactions in the `payments` table and
+   integrate providers (e.g. PayPal, Stripe) using Laravel's APIs or a package
+   like Cashier.
+
+With these building blocks in place you can expand controllers and routes to
+offer a full self‑service portal for each school.
+
 
 ## About Laravel
 
