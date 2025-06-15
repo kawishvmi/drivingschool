@@ -11,7 +11,15 @@ class School extends Model
 
     protected $fillable = [
         'name',
-        'domain',
+        'legal_name',
+        'contact_person',
+        'email',
+        'phone',
+        'country',
+        'address',
+        'subdomain',
+        'dpo_contact',
+        'marketing_opt_in',
     ];
 
     public function users()
