@@ -20,6 +20,11 @@ class School extends Model
         'subdomain',
         'dpo_contact',
         'marketing_opt_in',
+        'website',
+        'established_year',
+        'instructors_count',
+        'timezone',
+        'description',
     ];
 
     public function users()

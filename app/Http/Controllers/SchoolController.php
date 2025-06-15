@@ -27,6 +27,11 @@ class SchoolController extends Controller
             'subdomain' => 'required|alpha_dash|unique:schools,subdomain',
             'password' => 'required|confirmed|min:8',
             'accept_terms' => 'accepted',
+            'website' => 'nullable|url',
+            'established_year' => 'nullable|integer|between:1900,' . date('Y'),
+            'instructors_count' => 'nullable|integer|min:0',
+            'timezone' => 'nullable',
+            'description' => 'nullable',
         ]);
 
         $subdomain = Str::slug($request->subdomain ?: $request->name);
@@ -42,6 +47,11 @@ class SchoolController extends Controller
             'subdomain' => $subdomain,
             'dpo_contact' => $request->dpo_contact,
             'marketing_opt_in' => $request->boolean('marketing_opt_in'),
+            'website' => $request->website,
+            'established_year' => $request->established_year,
+            'instructors_count' => $request->instructors_count,
+            'timezone' => $request->timezone,
+            'description' => $request->description,
         ]);
 
         User::create([

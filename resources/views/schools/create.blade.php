@@ -33,6 +33,26 @@
         <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
     </div>
     <div class="mb-3">
+        <label for="website" class="form-label">Website (optional)</label>
+        <input type="url" class="form-control" id="website" name="website">
+    </div>
+    <div class="mb-3">
+        <label for="established_year" class="form-label">Year Established</label>
+        <input type="number" class="form-control" id="established_year" name="established_year" min="1900" max="{{ date('Y') }}">
+    </div>
+    <div class="mb-3">
+        <label for="instructors_count" class="form-label">Number of Instructors</label>
+        <input type="number" class="form-control" id="instructors_count" name="instructors_count" min="0">
+    </div>
+    <div class="mb-3">
+        <label for="timezone" class="form-label">Time Zone</label>
+        <input type="text" class="form-control" id="timezone" name="timezone">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">School Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
         <label for="subdomain" class="form-label">Preferred Subdomain</label>
         <div class="input-group">
             <input type="text" class="form-control" id="subdomain" name="subdomain" required>
